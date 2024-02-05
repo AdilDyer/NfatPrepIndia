@@ -1,0 +1,27 @@
+<%layout("/layouts/boilerplate")%>
+<body>
+  <br /><br />
+  <h2>&nbsp;&nbsp;&nbsp;&nbsp;Courses & Fee</h2><br>
+  <hr style="margin-bottom: 0;">
+
+  <div class="cards cards-sc">
+    <%for(course of allCourses){%>
+    <div class="card card-sc" style="width: 22rem; height: 35rem;">
+      <img
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAAAA1BMVEUAAACnej3aAAAAR0lEQVR4nO3BAQ0AAADCoPdPbQ8HFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPBgxUwAAU+n3sIAAAAASUVORK5CYII="
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body card-body-sc">
+        <h5 class="card-title card-title-sc"><%=course.title%></h5>
+         &#8377; <%=course.price.toLocaleString("en-IN")%> /--
+        <p class="card-text">
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.<%=course.description%>
+        </p>
+        <a href="#" class="btn btn-primary card-sc-btn">Go For Course</a>
+      </div>
+    </div>
+    <%}%>
+  </div>
+</body>

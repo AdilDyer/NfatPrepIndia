@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* navbar items  */
+#logo-icon img {
+  height: 3rem;
+  width: 2.5rem;
+  margin-right: 1.5rem;
+}
+
+.navbar-nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.login-btn {
+  color: aliceblue;
+}
+
+.regis-btn {
+  color: black;
+}
+
+/* container */
+
+/* coraousel */
+
+.carousel-item {
+  height: 20rem;
+  width: 100%;
+}
+
+.carousel-item img {
+  height: 100%;
+  width: 100%;
+}
+
+/* footer */
+.f-info-links a {
+  text-decoration: none;
+  color: #222222;
+}
+.f-info-links a:hover {
+  text-decoration: underline;
+}
+
+.f-info-links,
+.f-info-socials,
+.f-info-brand {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.f-info-socials i {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+}
+.f-info {
+  text-align: center;
+  display: flex;
+  height: 8rem;
+  background-color: #ebebeb;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: space-evenly;
+}
+#footer-page {
+  margin-top: 0;
+}
+
+/* connect-us-page */
+.Card {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: scroll;
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+  padding: 20%;
+  padding-bottom: -30%;
+  /* border: 0.5rem  groove grey;
+  border-radius: 2rem;
+  padding-top : 10rem; */
+  background-image: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIkA4QMBIgACEQEDEQH/xAAYAAEBAQEBAAAAAAAAAAAAAAABAAIGA//EABYQAQEBAAAAAAAAAAAAAAAAAAABEf/EABcBAQEBAQAAAAAAAAAAAAAAAAABAgX/xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAMAwEAAhEDEQA/AO/STTvpJAkUCRQJFCBEgEUIEUDOJoChFAyigZRQoSQJJAkkCSQIpAiiIkUIkTggRIM4mkDKxrEDKaAMpoCsooGQ0BQChQkgSSBEEEUREUREjCICsOCLEcQmjCkCBQBFAzgaQrIaArIaArIaAoBAqSQFRECYDBkkNCIoiJIiJY1iwTRhwoTWcWNINYD0wC6wiBQGgKyGqKKyDQKARRoIoCQRDCI1BlGIiGJQwQlQjKKQiw4UIA0gZBQrIbZorCNFGhWWqKLGQ0zRoA0ChFAoYI1AJgjUGTDAYMmNMxqCUlQwZRRGUigCKEZTTIrIKGmWW6zRYzRTQNMhqs0aDNaoooSQpMBghjUZjUEMMUQy1GoIRkxqCEZJEMEJSGUCgZDQorNBFGmaKRRpiqpUaZrNaoo0zQaBQihUYDBKWozGoI1FAYMtwsxqDLULMagyYYIYI0gRkhAFRUBQKQNMikUaYqqqo0zQaKNM0GgVJIURqMwg1GoyRlqGCGDNMbjEaglahjMMGWmmUMtIECEBCEBQKWRVWaaKNRmg0UaFZpoGhRTWRUkhX//Z");
+}
+
+.card-title {
+  font-size: 5rem;
+}
+
+/* courses page */
+.card-title-sc {
+  font-size: 2rem;
+}
+
+.cards-sc {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.card-sc {
+  margin: 2rem;
+  margin-bottom: 4rem;
+  display: inline-flex;
+  border-color: hotpink;
+  box-shadow: 0.2rem 0.2rem 1rem pink;
+}
+
+.card-body-sc {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: scroll;
+}
+
+.card-sc-btn {
+  height: 2.5rem;
+}
+
+/* login page  */
+.container-login {
+  height: 100vh;
+  width: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Card-login {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: scroll;
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+  padding: 20%;
+  padding-bottom: -30%;
+  /* border: 0.5rem  groove grey;
+  border-radius: 2rem;
+  padding-top : 10rem; */
+  background-image: url("https://wallpapers.com/images/featured/cute-yellow-mk655ggc39v2i5go.jpg");
+  background-size: cover;
+}
+
+/* register page  */
+.Card-login-regis {
+  background-image: url("https://w0.peakpx.com/wallpaper/830/379/HD-wallpaper-abstract-dark-colorful-subtle-abstract-dark-colorful-deviantart-blur.jpg");
+  background-size: cover;
+  color: bisque;
+}
+
+.regis-subtext {
+  opacity: 75%;
+}
+
+.regis-using-text {
+  color: aqua;
+}
+
+.credentials {
+  width: 30rem;
+  text-align: center;
+  background-color: rgb(255, 105, 180, 0.1);
+}

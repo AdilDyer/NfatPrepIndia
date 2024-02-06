@@ -5,5 +5,4 @@ router.route("/").get((req, res, next) => {
   res.render("connect.ejs");
 });
 
-
 module.exports = router;

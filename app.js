@@ -14,10 +14,9 @@ const wrapAsync = require("./utils/wrapAsync.js");
 const indexRouter = require("./routes/index.js");
 const courseRouter = require("./routes/course.js");
 const connectRouter = require("./routes/connectus.js");
-
-
-
-
+const loginRouter = require("./routes/login.js");
+const registerRouter = require("./routes/register.js");
+const ExpressError = require("./utils/ExpressError.js");
 
 app.engine("ejs", ejsMate);
 app.set("views", path.join(__dirname, "views"));
@@ -25,9 +24,6 @@ app.set("view engine", "ejs");
 app.use(methodOverride("_method"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "/public")));
-
-
-
 
 main()
   .then(() => {
@@ -39,69 +35,17 @@ async function main() {
   await mongoose.connect("mongodb://127.0.0.1:27017/nfatprepindia");
 }
 
-
-
-
-
 app.listen(8080, () => {
   console.log("port is listening to port 8080 ..");
 });
 
 app.use("/connectus", connectRouter);
-
-//login page
-app.get("/login", (req, res, next) => {
-  res.render("login.ejs");
-});
-
-//register-details-page
-app.get("/register", (req, res) => {
-  res.render("register.ejs");
-});
-
-//registration of user in db
-
-app.post("/register", async (req, res) => {
-  try {
-    let { username, password } = req.body;
-
-    // Validate input (e.g., check for existing username, strong password policy)
-
-    // Hash the password before saving it to the database
-
-    // Save user to the database
-
-    const newUser = new User({ username, password });
-    await newUser.save();
-
-    res.status(201).send("User registered successfully");
-  } catch (error) {
-    console.error(error);
-    res.status(500).send("Internal Server Error");
-  }
-});
-
-//login of user from db
-app.post("/login", async (req, res) => {
-  try {
-    const { username, password } = req.body;
-
-    // Find the user in the database
-    const user = await User.findOne({ username });
-
-    // Check if the user exists and verify the password
-    if (user.username === username && user.password === password) {
-      // Successful login
-      res.status(200).send("Login successful");
-    } else {
-      // Invalid username or password
-      res.status(401).send("Invalid username or password");
-    }
-  } catch (error) {
-    console.error(error);
-    res.status(500).send("Internal Server Error");
-  }
-});
-
+app.use("/login", loginRouter);
+app.use("/register", registerRouter);
 app.use("/", indexRouter);
 app.use("/courses", courseRouter);
+
+app.use((err, req, res, next) => {
+  let { statusCode = 500, message = "something went wrong" } = err;
+  res.status(statusCode).render("error.ejs", { err });
+});

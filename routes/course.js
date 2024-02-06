@@ -1,9 +1,9 @@
 const express = require("express");
 const router = express.Router();
+const Course = require("../models/course");
+const wrapAsync = require("../utils/wrapAsync");
+const courseController = require("../controllers/course");
 
-router.route("/").get( async (req, res) => {
-  const allCourses = await Course.find({});
-  res.render("./showCourse.ejs", { allCourses });
-});
+router.route("/").get(courseController.showcourse);
 
 module.exports = router;
